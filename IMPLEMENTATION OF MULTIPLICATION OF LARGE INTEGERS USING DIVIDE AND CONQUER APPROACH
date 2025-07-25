@@ -1,0 +1,47 @@
+def karatsuba(x, y):
+
+x_str, y str = str(x), str(y) #Convert input numbers to strings for easy manipulation
+
+if len(x_str) == 1 or len(y_str) ==1: #If the input numbers have only one digit return x y
+
+# padding with leading zeros to make both numbers have the same length
+
+max len = max(len(x_str), len(y_str))
+
+x_str=x_str.zfill(max_len)
+
+y_stry_str.zfill(max_len)
+
+#Split the input numbers into halves
+
+n = len(x_str)
+
+n_half = n//2
+
+a, b = int(x_str[:n_half]), int(x_str[n_half:]]
+
+c, d=int(y_str[:n_half]), int(y_str[n_half:]]
+
+# Recursively compute the three products
+
+ac karatsuba(a, c)
+
+bd = karatsuba(b, d)
+
+ad_bc karatsuba((a + b), (c + d)) - ac - bd
+
+# Combine the three products to get the final result
+
+result(10**(2* n_half)) ac + (10**n_half) * ad_bc + bd
+
+return result
+
+#Main Part
+
+num1 = int(input("Enter Number 1: "))
+
+num2 = int(input("Enter Number 2: "))
+
+result = karatsuba(num1, num2)
+
+print(result)
